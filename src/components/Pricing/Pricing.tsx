@@ -21,9 +21,9 @@ export default function Pricing() {
             <li>✔ Basic SEO Setup</li>
             <li>✖ No CMS Integration</li>
           </ul>
-          <button className="w-full bg-[#FF914D] text-white py-3 rounded-md hover:bg-orange-600 transition">
+          <a href="#contact" className="w-full bg-[#FF914D] text-white p-3 rounded-md hover:bg-orange-600 transition">
             Get Started
-          </button>
+          </a>
         </div>
 
         {/* Standard Plan (Highlighted) */}
@@ -36,9 +36,9 @@ export default function Pricing() {
             <li>✔ SEO Optimization</li>
             <li>✔ CMS Integration</li>
           </ul>
-          <button className="w-full bg-[#FF914D] text-white py-3 rounded-md hover:bg-orange-600 transition">
+          <a  href="#contact"className="w-full bg-[#FF914D] text-white p-3 rounded-md hover:bg-orange-600 transition">
             Get Started
-          </button>
+          </a>
         </div>
 
         {/* Premium Plan */}
@@ -51,9 +51,9 @@ export default function Pricing() {
             <li>✔ SEO + Analytics</li>
             <li>✔ Priority Support</li>
           </ul>
-          <button className="w-full bg-[#FF914D] text-white py-3 rounded-md hover:bg-orange-600 transition">
+          <a href="#contact" className="w-full bg-[#FF914D] text-white p-3 rounded-md hover:bg-orange-600 transition">
             Get Started
-          </button>
+          </a>
         </div>
       </div>
     </section>
