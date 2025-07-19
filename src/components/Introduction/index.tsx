@@ -42,30 +42,44 @@ function Introduction() {
   return (
     <OrangeVerLayout>
       {/* About Section */}
-      <section id="about" className="min-h-screen flex flex-col md:flex-row items-center justify-center text-white gap-10 px-6 md:px-16">
-        {/* Profile Image */}
-        <Image
-          src="/Profile.jpg"
-          alt="Anirudh Kulkarni - Full Stack Developer Profile Picture"
-          width={300}
-          height={300}
-          className="rounded-lg shadow-lg"
-          priority
-        />
+      <section
+  id="about"
+  className="min-h-screen flex flex-col md:flex-row items-center justify-center text-white gap-10 px-6 md:px-16"
+>
+  {/* Profile Image */}
+  <Image
+    src="/Profile.jpg"
+    alt="Anirudh Kulkarni - Full Stack Developer"
+    width={300}
+    height={300}
+    className="rounded-lg shadow-lg"
+    priority
+  />
 
-        {/* Text Content */}
-        <div className="max-w-2xl">
-          <h2 className="font-bold text-xl mb-3">About Me</h2>
-          <h3 className="font-semibold text-3xl md:text-4xl leading-snug mb-5">
-            I will <span className="text-[#FF914D]">Design and Develop</span> the best websites
-          </h3>
-          <p className="text-gray-400 leading-relaxed">
-            I am a Full Stack Developer based in Bangalore, India, specializing in modern web technologies
-            like <strong>Next.js</strong>, <strong>React</strong>, and <strong>Node.js</strong>. I create dynamic and
-            responsive applications, delivering high-quality solutions that meet client needs.
-          </p>
-        </div>
-      </section>
+  {/* Text Content */}
+  <div className="max-w-2xl">
+    <h2 className="font-bold text-xl mb-3">About Me</h2>
+    <h3 className="font-semibold text-3xl md:text-4xl leading-snug mb-5">
+      I build <span className="text-[#FF914D]">fast, scalable websites</span> that grow your business.
+    </h3>
+    <p className="text-gray-400 leading-relaxed mb-4">
+      I'm a Full Stack Developer from Bangalore, India, specializing in modern web technologies like
+      <strong> Next.js</strong>, <strong>React</strong>, and <strong>Node.js</strong>. I help startups and businesses
+      launch sleek, high-performing websites that convert visitors into customers.
+    </p>
+    <p className="text-gray-400 leading-relaxed">
+      If you need a <strong>responsive website</strong> or a <strong>custom web app</strong> that works seamlessly on
+      all devices, I can make it happen—on time and within budget.
+    </p>
+    <a
+      href="#contact"
+      className="inline-block mt-6 bg-[#FF914D] text-black font-semibold px-6 py-3 rounded-lg shadow hover:scale-105 transition-transform"
+    >
+      Get Your Free Quote →
+    </a>
+  </div>
+</section>
+
 
       {/* Featured Projects */}
       <section className="bg-[#1F1B1A] py-12 px-6">
