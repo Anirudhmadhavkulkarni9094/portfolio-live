@@ -8,18 +8,29 @@ function Navbar() {
   return (
     <div>
       {/* Navbar */}
-      <div className="flex items-center justify-between p-4 bg-[#1F1B1A] relative z-20">
-        <Menu
-          color="white"
-          size={40}
-          className="cursor-pointer"
-          onClick={() => setIsOpen(true)}
-        />
-        <div className="text-white text-2xl font-bold">
-          Anirudh <span className="text-[#FF914D]">Kulkarni</span>
-        </div>
-        <div></div>
-      </div>
+     <div className="flex items-center justify-between px-6 py-4 bg-[#1F1B1A] shadow-md sticky top-0 ">
+  {/* Left: Logo */}
+  <div className="text-white text-2xl font-bold">
+    Anirudh <span className="text-[#FF914D]">Kulkarni</span>
+  </div>
+
+  {/* Desktop Menu */}
+  <div className="hidden md:flex space-x-8 text-white font-medium">
+    <a href="#services" className="hover:text-[#FF914D] transition">Services</a>
+    <a href="#pricing" className="hover:text-[#FF914D] transition">Pricing</a>
+    <a href="/" className="text-gray-600 transition " title="coming soon" aria-disabled>Blogs</a>
+    <a href="#contact" className="hover:text-[#FF914D] transition">Contact</a>
+  </div>
+
+  {/* Mobile Menu Button */}
+  <Menu
+    color="white"
+    size={36}
+    className="cursor-pointer md:hidden"
+    onClick={() => setIsOpen(true)}
+  />
+</div>
+
 
       {/* Sidebar */}
       <div

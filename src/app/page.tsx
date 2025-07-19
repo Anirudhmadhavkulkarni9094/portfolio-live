@@ -32,6 +32,10 @@ export default function Home() {
         <meta name="twitter:description" content="Full Stack Developer based in Bangalore, specializing in modern web technologies." />
         <meta name="twitter:image" content="/home.png" />
       </Head>
+      <div className="relative sticky top-0 z-50">
+              <Navbar />
+      </div>
+
       <Hero></Hero>
       <Introduction/>
       <Services></Services>

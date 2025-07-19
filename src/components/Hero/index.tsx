@@ -7,7 +7,6 @@ function Hero() {
   return (
     <div>
       <OrangeLayout>
-        <Navbar />
         <main className="flex flex-col md:flex-row items-center justify-between gap-8 min-h-[80vh]">
           
           {/* Social Icons */}
