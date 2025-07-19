@@ -13,14 +13,14 @@ function OrangeVerLayout({ children }: { children: React.ReactNode }) {
         <div className="absolute top-0 right-0 hidden md:block">
           <Image
             src="/cube.png"
-            alt=""
+            alt="Cube"
             width={50}
             height={50}
             className="animate-bounce"
           />
           <Image
             src="/OCUBE.png"
-            alt=" "
+            alt="orange Cube"
             width={250}
             height={250}
             className="rotate-6 animate-bounce"
