@@ -1,7 +1,5 @@
 import Head from "next/head";
-import OrangeLayout from "@/components/Layout/OrangeLayout";
 import Navbar from "@/components/Navbar/Navbar";
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import Introduction from "@/components/Introduction";
 import GetQuote from "@/components/GetQuote/GetQuote";
