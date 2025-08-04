@@ -1,0 +1,231 @@
+[
+  {
+    "id": "post-1",
+    "title": "The Rise of AI Co-Founders: Building Startups with Autonomous Agents",
+    "slug": "the-rise-of-ai-cofounders-building-startups",
+    "content": "<p>The startup world is evolving fast. And now, a new kind of partner is entering the arena: <strong>AI co-founders</strong>. These aren't just smart assistants — they're autonomous agents capable of ideating, prototyping, marketing, and scaling a business, often with minimal human input.</p><p>With tools like GPT-4, LangChain, and Zapier, founders are now leveraging AI to:</p><ul><li><p>Brainstorm product ideas</p></li><li><p>Build MVPs</p></li><li><p>Generate landing pages</p></li><li><p>Write copy, emails, and even investor pitches</p></li></ul><p>Startups like Devin, Cognosys, and Clippy AI are early signs of this new era.</p><p>The future isn’t just human + AI — it’s <em>co-creation</em>. Are you building with AI, or competing against those who are?</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/ai-cofounder-startup.jpg",
+    "publish": true,
+    "excerpt": "AI co-founders are revolutionizing startups by autonomously ideating, prototyping, and scaling businesses with minimal human input.",
+    "created_at": "2025-07-27T06:30:00.000Z",
+    "category": {
+      "id": 1,
+      "label": "Technology",
+      "slug": "technology",
+      "description": "Posts about latest in tech",
+      "value": "tech"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 2,
+        "slug": "startups",
+        "label": "Startups",
+        "value": "startups",
+        "description": "Startup and business building"
+      }
+    ]
+  },
+  {
+    "id": "post-2",
+    "title": "Autonomous Workflows: How AI Agents Are Replacing SOPs",
+    "slug": "autonomous-workflows-ai-agents-vs-sops",
+    "excerpt": "AI agents are transforming business processes by replacing static SOPs with dynamic, adaptive workflows that learn and optimize over time.",
+    "content": "<p>Standard Operating Procedures (SOPs) have powered businesses for decades. But they’re static, brittle, and require manual oversight. Enter <strong>autonomous AI workflows</strong> — dynamic agents that execute, adapt, and optimize without rigid scripts.</p><p>Why replace SOPs?</p><ul><li><p>AI agents learn and evolve from feedback</p></li><li><p>Can adapt across edge cases</p></li><li><p>Eliminate bottlenecks and reduce human error</p></li></ul><p>From handling customer support to onboarding new hires — AI agents are turning process into intelligence.</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/autonomous-workflows.jpg",
+    "publish": true,
+    "created_at": "2025-07-27T06:31:00.000Z",
+    "category": {
+      "id": 2,
+      "label": "AI",
+      "slug": "AI",
+      "description": "Posts about latest in tech",
+      "value": "AI"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 3,
+        "slug": "automation",
+        "label": "Automation",
+        "value": "automation",
+        "description": "Workflow and task automation"
+      }
+    ]
+  },
+  {
+    "id": "post-3",
+    "title": "LangChain, AutoGPT & Beyond: The AI Agent Stack Explained",
+    "slug": "langchain-autogpt-agent-stack",
+    "excerpt": "Discover the modern AI agent stack with LLM cores, LangChain, AutoGPT, and Vector DBs that enable autonomous reasoning and memory.",
+    "content": "<p>Want to build your own AI agent? It’s easier than ever — thanks to the rise of open-source frameworks and APIs. But what does the modern agent stack look like?</p><ol><li><p><strong>LLM Core</strong>: GPT-4, Claude, Mistral</p></li><li><p><strong>LangChain</strong>: To add tools, memory, and logic</p></li><li><p><strong>AutoGPT / BabyAGI</strong>: Autonomous reasoning loops</p></li><li><p><strong>Vector DBs</strong>: Pinecone, Weaviate for memory</p></li></ol><p>This modular stack is enabling agents that can browse, code, email, and even build other agents. The agent economy is here — are you building?</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/ai-agent-stack.jpg",
+    "publish": true,
+    "created_at": "2025-07-27T06:32:00.000Z",
+    "category":  {
+      "id": 2,
+      "label": "AI",
+      "slug": "AI",
+      "description": "Posts about latest in tech",
+      "value": "AI"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 4,
+        "slug": "langchain",
+        "label": "LangChain",
+        "value": "langchain",
+        "description": "LangChain tools & frameworks"
+      }
+    ]
+  },
+  {
+    "id": "post-4",
+    "title": "From Chatbots to Chief-of-Staff: The Evolution of AI Interfaces",
+    "slug": "from-chatbots-to-chief-of-staff",
+    "excerpt": "AI interfaces are evolving from simple chatbots to proactive chief-of-staff level assistants that handle complex workflows and anticipate needs.",
+    "content": "<p>Chatbots were just the beginning. AI interfaces are now transforming into <strong>chief-of-staff level assistants</strong> that can handle complex workflows, remember context, and interact across systems.</p><p>Examples include:</p><ul><li><p><strong>OpenAI Assistants API</strong> — agent-like memory & tools</p></li><li><p><strong>Cognosys</strong> — autonomous workplace agents</p></li><li><p><strong>AI Notion agents</strong> — project managers on autopilot</p></li></ul><p>As interfaces evolve from reactive to proactive, your AI won’t just wait for instructions — it will anticipate needs.</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/ai-chief-of-staff.jpg",
+    "publish": true,
+    "created_at": "2025-07-27T06:33:00.000Z",
+    "category":  {
+      "id": 2,
+      "label": "AI",
+      "slug": "AI",
+      "description": "Posts about latest in tech",
+      "value": "AI"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 5,
+        "slug": "ux",
+        "label": "AI UX",
+        "value": "ux",
+        "description": "AI interface and experience design"
+      }
+    ]
+  },
+  {
+    "id": "post-5",
+    "title": "Building Your First AI Agent: A Step-by-Step Guide",
+    "slug": "build-your-first-ai-agent",
+    "excerpt": "Learn how to build your first AI agent using GPT-4 and LangChain in this beginner-friendly guide.",
+    "content": "<p>Curious about AI agents but don’t know where to start? This guide walks you through building your first simple agent using GPT-4 + LangChain.</p><h3>🧱 Prerequisites:</h3><ul><li><p>Basic knowledge of Python/JavaScript</p></li><li><p>Access to OpenAI API</p></li><li><p>Understanding of prompt engineering</p></li></ul><h3>🔧 Steps:</h3><ol><li><p>Define a simple task (e.g. send an email, summarize docs)</p></li><li><p>Use LangChain to add memory & tools</p></li><li><p>Deploy on Replit or Vercel</p></li></ol><p>Within a weekend, you can build your own digital assistant — and expand from there.</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/build-ai-agent.jpg",
+    "publish": true,
+    "created_at": "2025-07-27T06:34:00.000Z",
+    "category":  {
+      "id": 3,
+      "label": "Health & Tech",
+      "slug": "Health & Tech",
+      "description": "Posts about latest in tech",
+      "value": "Health & Tech"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 4,
+        "slug": "langchain",
+        "label": "LangChain",
+        "value": "langchain",
+        "description": "LangChain tools & frameworks"
+      }
+    ]
+  },{
+    "id": "post-6",
+    "title": "AI Agents in Action: Real-World Use Cases",
+    "slug": "ai-agents-real-world-use-cases",
+    "excerpt": "Explore how AI agents are being used in real-world applications, from customer support to content creation.",
+    "content": "<p>AI agents are no longer just theoretical. They’re being deployed across industries to automate tasks, enhance productivity, and create new business models.</p><h3>🌍 Use Cases:</h3><ul><li><p>Customer support chatbots that learn from interactions</p></li><li><p>Content generation tools for blogs and social media</p></li><li><p>Personalized shopping assistants</p></li></ul><p>The possibilities are endless — and the impact is profound.</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/ai-agents-in-action.jpg",
+    "publish": true,
+    "created_at": "2025-07-27T06:35:00.000Z",
+    "category": {
+      "id": 3,
+      "label": "Health & Tech",
+      "slug": "Health & Tech",
+      "description": "Posts about latest in tech",
+      "value": "Health & Tech"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 6,
+        "slug": "use-cases",
+        "label": "Use Cases",
+        "value": "use-cases",
+        "description": "Real-world applications of AI agents"
+      }
+    ]
+  },{
+    "id": "post-7",
+    "title": "The Future of Work: AI Agents as Team Members",
+    "slug": "future-of-work-ai-agents-team-members",
+    "excerpt": "AI agents are becoming integral team members, enhancing collaboration and productivity in the workplace.",
+    "content": "<p>The future of work is collaborative — and AI agents are becoming key team members. They’re not just tools, but partners that enhance human capabilities.</p><h3>🤝 Collaboration:</h3><ul><li><p>AI agents can handle repetitive tasks, freeing up humans for creative work</p></li><li><p>They can analyze data and provide insights in real-time</p></li><li><p>Agents can even participate in meetings, taking notes and summarizing discussions</p></li></ul><p>As AI agents become more capable, they’ll redefine what it means to be part of a team.</p>",
+    "featured_image": "https://ikkojorhyczyrmuabuzm.supabase.co/storage/v1/object/public/post-images/ai-agents-future-of-work.jpg",
+    "publish": true,
+    "created_at": "2025-07-27T06:36:00.000Z",
+    "category": {
+      "id": 1,
+      "label": "Technology",
+      "slug": "Technology",
+      "description": "Posts about latest in tech",
+      "value": "tech"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "slug": "ai",
+        "label": "AI",
+        "value": "ai",
+        "description": "Artificial Intelligence"
+      },
+      {
+        "id": 7,
+        "slug": "future-of-work",
+        "label": "Future of Work",
+        "value": "future-of-work",
+        "description": "AI agents in the workplace"
+      }
+    ] 
+  }
+]

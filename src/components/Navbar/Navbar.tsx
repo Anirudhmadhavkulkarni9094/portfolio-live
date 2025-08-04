@@ -18,7 +18,7 @@ function Navbar() {
   <div className="hidden md:flex space-x-8 text-white font-medium">
     <a href="#services" className="hover:text-[#FF914D] transition">Services</a>
     <a href="#pricing" className="hover:text-[#FF914D] transition">Pricing</a>
-    <a href="/" className="text-gray-600 transition " title="coming soon" aria-disabled>Blogs</a>
+    <a href="/blogs" className="hover:text-[#FF914D] transition">blogs</a>
     <a href="#contact" className="hover:text-[#FF914D] transition">Contact</a>
   </div>
 
