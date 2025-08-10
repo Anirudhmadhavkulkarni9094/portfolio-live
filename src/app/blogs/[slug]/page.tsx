@@ -2,10 +2,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams, notFound } from "next/navigation";
+import { useParams, notFound, useRouter } from "next/navigation";
 import Image from "next/image";
 import { supabase } from "@/lib/supabaseClient";
-import { Share, Share2Icon } from "lucide-react";
+import { MoveLeft, SendToBack, Share, Share2Icon } from "lucide-react";
 
 type Post = {
   id: string;
@@ -20,6 +20,7 @@ type Post = {
 };
 
 export default function PostPreview() {
+  const router = useRouter();
   const params = useParams();
   const slug = params.slug as string;
 
@@ -64,8 +65,15 @@ export default function PostPreview() {
 
   return (
     <div className="min-h-screen bg-[#0e0e0e] py-10 px-4 text-white">
+ <button
+      onClick={() => router.back()}
+      className="text-white flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors duration-200 text-foreground"
+      aria-label="Go Back"
+    >
+      <MoveLeft className="w-5 h-5" />
+      <span className="hidden sm:inline">Go Back</span>
+    </button>        {/* Header */}
       <article className="max-w-5xl mx-auto bg-[#1a1a1a] shadow-2xl rounded-3xl overflow-hidden border border-gray-800">
-        {/* Header */}
         <header className="p-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
