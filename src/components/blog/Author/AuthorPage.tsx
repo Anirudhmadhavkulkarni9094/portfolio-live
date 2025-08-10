@@ -11,14 +11,14 @@ export default function AuthorCard() {
         height={100}
         className="rounded-full border border-gray-300 shadow-sm"
       />
-      <h1 className="text-xl font-semibold text-white">Anirudh Kulkarni</h1>
-      <p className='text-sm text-orange-500 text-center'>Published • 35 Articles</p>
-      <h2 className="text-sm text-orange-500 text-center">
+      <div className="text-xl font-semibold text-white">Anirudh Kulkarni</div>
+      <div className='text-sm text-orange-500 text-center'>Published • 35 Articles</div>
+      <div className="text-sm text-orange-500 text-center">
         Full Stack Developer | Blogger | Travel Enthusiast
-      </h2>
-      <h3 className='text-sm text-gray-400 text-center'>
+      </div>
+      <div className='text-sm text-gray-400 text-center'>
         Passionate about building innovative web solutions and sharing knowledge through blogging. Follow my journey!
-      </h3>
+      </div>
     </div>
   );
 }

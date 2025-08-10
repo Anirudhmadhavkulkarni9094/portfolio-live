@@ -3,6 +3,7 @@ import FeaturedPost from '../FeaturedPost/FeaturedPost'
 import PostCard from '../FeaturedPost/PostCard'
 import AuthorPage from '../Author/AuthorPage'
 function Hero({post}: { post: any[] }) {
+  console.log("hero", post)
   return (
 <div className="flex flex-col lg:flex-row gap-10 mb-16">
   {/* Left: Author Profile */}
