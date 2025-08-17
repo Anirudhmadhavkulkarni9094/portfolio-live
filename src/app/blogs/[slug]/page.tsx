@@ -59,9 +59,7 @@ export default function PostPreview() {
 
   if (!post) return null;
 
-  const shareUrl = `${
-    "https://anirudh-kulkarni.com"
-  }/all-post/${post.slug}`;
+  const shareUrl = `https://anirudh-kulkarni.com/blogs/${post.slug}`;
 
   return (
     <div className="min-h-screen bg-[#0e0e0e] py-10 px-4 text-white">
