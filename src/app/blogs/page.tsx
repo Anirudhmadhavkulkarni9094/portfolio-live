@@ -34,8 +34,7 @@ export default function Page() {
   return (
     <main className="min-h-screen px-4 py-10 space-y-16">
       {/* Top Section: Hero Banner */}
-      {posts.length > 0 && <Hero post={posts} />} ✅ Pass first post
-
+      {posts.length > 0 && <Hero post={posts} />}
       {/* Categorized Sections */}
       {Object.entries(categorizedPosts).map(([categoryId, posts]) => {
         const categoryLabel = posts[0]?.category?.label || categoryId;

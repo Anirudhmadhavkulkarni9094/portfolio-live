@@ -60,7 +60,7 @@ function Navbar() {
 >
             Services
           </a>
-          <a href="#blogs" className="hover:text-[#FF914D] transition"             onClick={() => setIsOpen(false)}
+          <a href="/blogs" className="hover:text-[#FF914D] transition"             onClick={() => setIsOpen(false)}
 >
             Blogs
           </a>
