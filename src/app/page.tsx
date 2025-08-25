@@ -5,6 +5,7 @@ import Introduction from "@/components/Introduction";
 import GetQuote from "@/components/GetQuote/GetQuote";
 import Pricing from "@/components/Pricing/Pricing";
 import Services from "@/components/Services/Services";
+import HomeBlog from "@/components/HomeBlog/HomeBlog";
 
 export default function Home() {
   return (
@@ -31,11 +32,12 @@ export default function Home() {
         <meta name="twitter:image" content="/home.png" />
       </Head>
       <div className="relative sticky top-0 z-50">
-              <Navbar />
+      <Navbar />
       </div>
 
       <Hero></Hero>
       <Introduction/>
+      <HomeBlog></HomeBlog>
       <Services></Services>
       <Pricing></Pricing>
       <GetQuote></GetQuote>
