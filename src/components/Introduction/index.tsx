@@ -13,7 +13,7 @@ function Introduction() {
   const featuredProjects = [
     {
       title: "Floworq",
-      description: "An Australian-based startup for employee management.",
+      description: "An Australian-based startup for employee management, built employment payroll integration.",
       link: "https://www.floworq.com/",
       budget: "$300",
       ongoing: false,

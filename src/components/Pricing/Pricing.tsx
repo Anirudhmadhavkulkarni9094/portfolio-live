@@ -14,7 +14,7 @@ export default function Pricing() {
         {/* Basic Plan */}
         <div className="border border-gray-700 bg-[#2A2524] p-8 rounded-xl hover:scale-105 transition-transform">
           <h3 className="text-xl font-bold text-white mb-4">Basic</h3>
-          <p className="text-4xl font-extrabold text-[#FF914D] mb-4">$99</p>
+          <p className="text-4xl font-extrabold text-[#FF914D] mb-4">$399</p>
           <ul className="text-gray-400 space-y-3 mb-6">
             <li>✔ 1 Landing Page</li>
             <li>✔ Responsive Design</li>
@@ -29,7 +29,7 @@ export default function Pricing() {
         {/* Standard Plan (Highlighted) */}
         <div className="border-2 border-[#FF914D] bg-[#2A2524] p-8 rounded-xl shadow-xl hover:scale-105 transition-transform">
           <h3 className="text-xl font-bold text-white mb-4">Standard</h3>
-          <p className="text-4xl font-extrabold text-[#FF914D] mb-4">$299</p>
+          <p className="text-4xl font-extrabold text-[#FF914D] mb-4">$599</p>
           <ul className="text-gray-400 space-y-3 mb-6">
             <li>✔ 5 Pages Website</li>
             <li>✔ Responsive Design</li>
@@ -44,7 +44,7 @@ export default function Pricing() {
         {/* Premium Plan */}
         <div className="border border-gray-700 bg-[#2A2524] p-8 rounded-xl hover:scale-105 transition-transform">
           <h3 className="text-xl font-bold text-white mb-4">Premium</h3>
-          <p className="text-4xl font-extrabold text-[#FF914D] mb-4">$499</p>
+          <p className="text-4xl font-extrabold text-[#FF914D] mb-4">$999</p>
           <ul className="text-gray-400 space-y-3 mb-6">
             <li>✔ Unlimited Pages</li>
             <li>✔ Custom Features</li>
