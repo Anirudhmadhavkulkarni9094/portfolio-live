@@ -6,6 +6,7 @@ import FourCardLayout from "@/components/blog/Layout/FourCardLayout";
 import Hero from "@/components/blog/Layout/Hero";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import SinglePostLayout from "@/components/blog/Layout/SinglePostLayout";
 
 export default function Page() {
   const [posts, setPosts] = useState<any[]>([]);
@@ -50,7 +51,7 @@ export default function Page() {
             {posts.length >= 4 && <FourCardLayout posts={posts.slice(0, 4)} />}
             {posts.length === 1 && (
               <div className="max-w-xl mx-auto">
-                <TwoCardLayout posts={posts} /> {/* reuse layout for single */}
+                <SinglePostLayout posts={posts[0]} /> {/* reuse layout for single */}
               </div>
             )}
           </section>
