@@ -19,19 +19,12 @@ function Introduction() {
       ongoing: false,
     },
     {
-      title: "Capital Directories",
-      description: "A South Asian investor management tool.",
-      link: "https://www.capitaldirectories.com/",
-      budget: "$200",
-      ongoing: false,
-    },
-    {
-      title: "Clientoid",
-      description: "MicroSaaS for post-delivery client management.",
-      link: "https://clientoid.vercel.app/",
-      budget: "$300",
+      title: "IPractis",
+      description: "A platform to connect students with teachers for online learning.",
+      link: "https://ipractis.com/",
+      budget: "Confidential",
       ongoing: true,
-    },
+    }
   ];
 
   const personalProjects = [

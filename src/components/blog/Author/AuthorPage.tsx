@@ -12,7 +12,7 @@ export default function AuthorCard() {
         className="rounded-full border border-gray-300 shadow-sm"
       />
       <div className="text-xl font-semibold text-white">Anirudh Kulkarni</div>
-      <div className='text-sm text-orange-500 text-center'>Published • 35 Articles</div>
+      <div className='text-sm text-orange-500 text-center'>Published • 6 Articles</div>
       <div className="text-sm text-orange-500 text-center">
         Full Stack Developer | Blogger | Travel Enthusiast
       </div>
