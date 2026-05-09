@@ -3,30 +3,24 @@ import React from 'react'
 
 function OrangeLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#1F1B1A] px-4 sm:px-8 md:px-16 lg:px-20 py-10 relative">
-      {/* Outer Gradient Border */}
-      <div className="relative p-[2px] w-full max-w-6xl rounded-lg bg-gradient-to-r from-[#FF914D] to-black">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative group">
+        {/* Animated background element */}
+        <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-3xl blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200"></div>
         
-        {/* Inner Content Box */}
-        <div className="bg-[#1F1B1A] shadow-lg p-6 sm:p-8 md:p-10 lg:p-12 rounded-lg">
+        {/* Main Content Container */}
+        <div className="relative bg-[#0f172a]/40 backdrop-blur-sm border border-white/5 rounded-3xl p-6 sm:p-10 lg:p-16">
           {children}
         </div>
 
-        {/* Decorative Cubes */}
-        <div className="absolute top-[-20px] right-[-40px] hidden md:flex flex-col items-end space-y-[-30px] opacity-80">
-          <Image
+        {/* Decorative elements */}
+        <div className="absolute -top-10 -right-10 hidden lg:block opacity-20 pointer-events-none">
+           <Image
             src="/cube.png"
-            alt="Decorative Cube"
-            width={60}
-            height={60}
-            className="rotate-[15deg]"
-          />
-          <Image
-            src="/OCUBE.png"
-            alt="Decorative OCube"
-            width={180}
-            height={180}
-            className="rotate-[5deg]"
+            alt=""
+            width={100}
+            height={100}
+            className="animate-float"
           />
         </div>
       </div>

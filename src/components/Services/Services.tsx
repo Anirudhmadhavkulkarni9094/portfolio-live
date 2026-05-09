@@ -66,26 +66,28 @@ export default function Services() {
 
 
   return (
-    <section className="bg-[#1F1B1A] py-16 px-6" id="services">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-          Services I Offer
-        </h2>
-        <p className="text-gray-400 max-w-xl mx-auto">
-          I provide end-to-end web solutions for businesses, startups, and individuals.
-        </p>
-      </div>
+    <section className="relative py-24 px-6 overflow-hidden" id="services">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,145,77,0.03)_0%,transparent_70%)] pointer-events-none" />
+      
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">What I Do</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Services & <span className="text-gradient">Solutions</span>
+          </h3>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            I offer a wide range of services to help you build, launch, and scale your digital products.
+          </p>
+        </div>
 
-      {/* Dynamic Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            icon={service.icon}
-            title={service.title}
-            description={service.description}
-          />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              {...service}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

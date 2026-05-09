@@ -19,109 +19,111 @@ function Introduction() {
       ongoing: false,
     },
     {
-      title: "IPractis",
-      description: "A platform to connect students with teachers for online learning.",
-      link: "https://ipractis.com/",
+      title: "Clinecxa.lk",
+      description: "A comprehensive Sri Lanka based telehealth platform connecting patients with healthcare professionals.",
+      link: "https://www.clinecxa.lk/",
       budget: "Confidential",
       ongoing: true,
     }
   ];
 
-  const personalProjects = [
-    { title: "Digital Innovation UI", description: "A Digital Agency for Marketing", link: "https://digital-innovation-studio.vercel.app/" },
-    { title: "Expense Tracker", description: "An Expense tracker built to track you daily spending!", link: "https://expense-tracker-next-app.vercel.app/" },
-  ];
+
 
   return (
     <OrangeVerLayout>
-      {/* About Section */}
-      <section
-  id="about"
-  className="min-h-screen flex flex-col md:flex-row items-center justify-center text-white gap-10 px-6 md:px-16"
->
-  {/* Profile Image */}
-  <Image
-    src="/Profile.jpg"
-    alt="Anirudh Kulkarni - Full Stack Developer"
-    width={300}
-    height={300}
-    className="rounded-lg shadow-lg"
-    priority
-  />
-
-  {/* Text Content */}
-  <div className="max-w-2xl">
-    <h2 className="font-bold text-xl mb-3">About Me</h2>
-    <h3 className="font-semibold text-3xl md:text-4xl leading-snug mb-5">
-      I build <span className="text-[#FF914D]">fast, scalable websites</span> that grow your business.
-    </h3>
-    <p className="text-gray-400 leading-relaxed mb-4">
-      I'm a Full Stack Developer from Bangalore, India, specializing in modern web technologies like
-      <strong> Next.js</strong>, <strong>React</strong>, and <strong>Node.js</strong>. I help startups and businesses
-      launch sleek, high-performing websites that convert visitors into customers.
-    </p>
-    <p className="text-gray-400 leading-relaxed">
-      If you need a <strong>responsive website</strong> or a <strong>custom web app</strong> that works seamlessly on
-      all devices, I can make it happen—on time and within budget.
-    </p>
-    <a
-      href="#contact"
-      className="inline-block mt-6 bg-[#FF914D] text-black font-semibold px-6 py-3 rounded-lg shadow hover:scale-105 transition-transform"
-    >
-      Get Your Free Quote →
-    </a>
-  </div>
-</section>
-
-
-      {/* Featured Projects */}
-      <section className="bg-[#1F1B1A] py-12 px-6">
-        <h2 className="text-white text-2xl font-bold mb-8">Featured Work: Web Development Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredProjects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-              budget={project.budget}
-              ongoing={project.ongoing}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Personal Projects */}
-      <section className="bg-[#1F1B1A] py-12 px-6">
-        <h2 className="text-white text-2xl font-bold mb-8">Personal Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {personalProjects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-12 px-6">
-        <h2 className="text-white text-2xl font-bold mb-8 text-center">My Skills & Technologies</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
-          {skills.map((skill) => (
+      <div className="space-y-24">
+        {/* About Section */}
+        <section
+          id="about"
+          className="flex flex-col lg:flex-row items-center justify-between gap-16 px-6 lg:px-12"
+        >
+          {/* Profile Image with decorative background */}
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary to-orange-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
             <Image
-              key={skill}
-              src={skill}
-              alt={`Technology: ${skill.split('/')[1].split('.')[0]} logo`}
-              width={50}
-              height={50}
-              className="m-2 hover:scale-110 transition-transform invert-100"
+              src="/Profile.jpg"
+              alt="Anirudh Kulkarni"
+              width={400}
+              height={400}
+              className="relative rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl"
+              priority
             />
-          ))}
-        </div>
-      </section>
+          </div>
+
+          {/* Text Content */}
+          <div className="max-w-2xl">
+            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">About Me</h2>
+            <h3 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+              I build <span className="text-gradient">high-performance</span> digital products.
+            </h3>
+            <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+              <p>
+                I&apos;m a Full Stack Developer based in Bangalore, India, dedicated to building 
+                exceptional digital experiences. I specialize in modern technologies like 
+                <span className="text-white font-medium"> Next.js</span>, 
+                <span className="text-white font-medium"> React</span>, and 
+                <span className="text-white font-medium"> Node.js</span>.
+              </p>
+              <p>
+                My goal is to help businesses bridge the gap between complex problems and 
+                elegant solutions. Whether it&apos;s a high-converting landing page or a 
+                complex SaaS platform, I deliver quality that scales.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary-hover hover:-translate-y-1 transition-all duration-300"
+              >
+                Start a Project
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Projects */}
+        <section className="px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Portfolio</h2>
+              <h3 className="text-3xl md:text-4xl font-bold">Featured Projects</h3>
+            </div>
+            <p className="text-gray-400 max-w-sm">
+              A selection of my recent work in web development and design.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredProjects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                {...project}
+              />
+            ))}
+          </div>
+        </section>
+
+
+
+        {/* Skills Section */}
+        <section className="px-6 lg:px-12 py-12 glass rounded-3xl mx-6 lg:mx-12">
+          <h2 className="text-center text-gray-400 font-medium uppercase tracking-[0.2em] mb-12">
+            Tech Stack & Tools
+          </h2>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {skills.map((skill) => (
+              <div key={skill} className="relative group">
+                 <Image
+                  src={skill}
+                  alt=""
+                  width={45}
+                  height={45}
+                  className="filter invert group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </OrangeVerLayout>
   );
 }
