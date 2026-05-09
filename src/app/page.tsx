@@ -10,27 +10,44 @@ import HomeBlog from "@/components/HomeBlog/HomeBlog";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Anirudh Kulkarni | Full Stack Developer in Bangalore</title>
-        <meta
-          name="description"
-          content="Anirudh Kulkarni is a Full Stack Developer based in Bangalore, specializing in modern web technologies like Next.js, React, and Node.js."
-        />
-        <meta name="keywords" content="Full Stack Developer, Next.js, React, Bangalore, Anirudh Kulkarni" />
-        <meta name="author" content="Anirudh Kulkarni" />
-
-        {/* Open Graph for Social Sharing */}
-        <meta property="og:title" content="Anirudh Kulkarni | Full Stack Developer" />
-        <meta property="og:description" content="Full Stack Developer based in Bangalore, skilled in MERN and modern web apps." />
-        <meta property="og:image" content="/home.png" />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Anirudh Kulkarni | Full Stack Developer" />
-        <meta name="twitter:description" content="Full Stack Developer based in Bangalore, specializing in modern web technologies." />
-        <meta name="twitter:image" content="/home.png" />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Anirudh Kulkarni",
+            "jobTitle": "Full Stack Developer",
+            "url": "https://anirudh-kulkarni.com",
+            "sameAs": [
+              "https://github.com/Anirudhmadhavkulkarni9094",
+              "https://linkedin.com/in/anirudh-kulkarni"
+            ],
+            "description": "Premium Full Stack Developer specializing in Next.js, React, and SaaS development.",
+            "knowsAbout": ["Web Development", "Next.js", "React", "Node.js", "Telehealth", "SaaS"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Web Development Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "SaaS Development"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "E-commerce Development"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
       <div className="relative sticky top-0 z-50">
       <Navbar />
       </div>
