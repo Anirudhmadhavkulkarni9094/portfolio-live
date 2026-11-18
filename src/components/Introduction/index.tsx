@@ -22,9 +22,15 @@ function Introduction() {
       title: "IPractis",
       description: "A platform to connect students with teachers for online learning.",
       link: "https://ipractis.com/",
-      budget: "Confidential",
+      budget: "$2,400",
       ongoing: true,
-    }
+    },
+    {
+      title: "Clinecxa",
+      description: "A Sri Lankan telehealth platform for booking video consultations with verified doctors, including appointment scheduling, prescriptions, follow-ups, and patient records.",
+      link: "https://clinecxa.lk/",
+      budget: "$10,000",
+    },
   ];
 
   const personalProjects = [
@@ -86,21 +92,6 @@ function Introduction() {
               link={project.link}
               budget={project.budget}
               ongoing={project.ongoing}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Personal Projects */}
-      <section className="bg-[#1F1B1A] py-12 px-6">
-        <h2 className="text-white text-2xl font-bold mb-8">Personal Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {personalProjects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              link={project.link}
             />
           ))}
         </div>
