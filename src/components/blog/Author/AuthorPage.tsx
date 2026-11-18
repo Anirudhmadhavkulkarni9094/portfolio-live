@@ -1,23 +1,22 @@
 import Image from 'next/image';
 import React from 'react';
 
-export default function AuthorCard() {
+export default function AuthorCard({ articleCount }: { articleCount: number }) {
   return (
-    <div className="w-72 h-96 max-w-sm p-4  rounded-2xl flex flex-col items-center gap-3">
+    <div className="flex items-center gap-4 rounded-3xl border border-white/[0.08] bg-white/[0.025] p-5 sm:p-6">
       <Image
         src="/Profile.jpg"
-        alt="profile"
-        width={100}
-        height={100}
-        className="rounded-full border border-gray-300 shadow-sm"
+        alt="Anirudh Kulkarni"
+        width={64}
+        height={64}
+        className="size-16 rounded-full border border-orange-200/20 object-cover"
       />
-      <div className="text-xl font-semibold text-white">Anirudh Kulkarni</div>
-      <div className='text-sm text-orange-500 text-center'>Published • 6 Articles</div>
-      <div className="text-sm text-orange-500 text-center">
-        Full Stack Developer | Blogger | Travel Enthusiast
-      </div>
-      <div className='text-sm text-gray-400 text-center'>
-        Passionate about building innovative web solutions and sharing knowledge through blogging. Follow my journey!
+      <div className="min-w-0">
+        <p className="text-xs font-medium uppercase tracking-[0.16em] text-stone-500">Written by</p>
+        <p className="mt-1 font-semibold text-white">Anirudh Kulkarni</p>
+        <p className="mt-1 text-xs leading-5 text-stone-400">
+          Developer, blogger &amp; curious builder · {articleCount} {articleCount === 1 ? "article" : "articles"}
+        </p>
       </div>
     </div>
   );
