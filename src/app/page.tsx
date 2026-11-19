@@ -135,7 +135,6 @@ export default function Home() {
             <span>SOFTWARE ENGINEER</span>
           </figcaption>
         </figure>
-        <div className="hero-index" aria-hidden="true">01 / 06</div>
       </section>
 
       <section className="work-section section-wrap" id="work" aria-labelledby="work-title">
@@ -166,7 +165,6 @@ export default function Home() {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 560px"
                 />
-                <span className="visual-caption">Live site</span>
                 <span className="visual-open" aria-hidden="true">
                   <ArrowUpRight size={18} />
                 </span>
@@ -240,10 +238,6 @@ export default function Home() {
             My work so far has been about building and shipping web products,
             from full-stack applications to software for early-stage teams.
             I&apos;m most at home where product decisions and engineering meet.
-          </p>
-          <p className="experience-footnote">
-            A fuller role-by-role timeline is coming. I prefer to share the
-            details accurately rather than fill in what isn&apos;t here yet.
           </p>
         </div>
       </section>
