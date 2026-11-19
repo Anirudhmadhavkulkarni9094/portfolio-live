@@ -6,6 +6,21 @@ import {
   Mail,
 } from "lucide-react";
 import GetQuote from "@/components/GetQuote/GetQuote";
+import { GITHUB_URL, SITE_NAME, SITE_URL } from "@/lib/site";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE_NAME,
+  url: SITE_URL,
+  image: `${SITE_URL}/Profile.jpg`,
+  jobTitle: "Software Engineer",
+  description:
+    "Software engineer in Bengaluru, India, building web products with React, Next.js and Node.js.",
+  address: { "@type": "PostalAddress", addressLocality: "Bengaluru", addressCountry: "IN" },
+  knowsAbout: ["React", "Next.js", "Node.js", "Express", "MongoDB", "Full-stack development"],
+  sameAs: [GITHUB_URL],
+};
 
 const projects = [
   {
@@ -88,6 +103,10 @@ const capabilities = [
 export default function Home() {
   return (
     <main className="portfolio">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <header className="site-header">
         <a className="wordmark" href="#home" aria-label="Anirudh Kulkarni, home">
           AK<span>.</span>
