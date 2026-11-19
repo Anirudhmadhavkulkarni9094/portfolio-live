@@ -14,9 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anirudh Kulkarni | Full Stack Developer Portfolio",
+  title: "Anirudh Kulkarni — Software Engineer",
   description:
-    "Portfolio of Anirudh Kulkarni, Full Stack Developer specializing in Next.js, React, and Node.js. Explore featured projects, skills, and contact information.",
+    "Anirudh Kulkarni is a software engineer in Bengaluru, India, building thoughtful products and reliable web applications with React, Next.js, and Node.js.",
+  openGraph: {
+    title: "Anirudh Kulkarni — Software Engineer",
+    description:
+      "Building software, products, and systems. Selected work and notes from Anirudh Kulkarni.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Anirudh Kulkarni — Software Engineer",
+    description:
+      "Building software, products, and systems. Selected work and notes from Anirudh Kulkarni.",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +42,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Analytics></Analytics>
+        {process.env.VERCEL && <Analytics />}
       </body>
     </html>
   );
