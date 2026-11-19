@@ -1,118 +1,161 @@
 "use client";
+
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+
+type FormFields = {
+  name: string;
+  email: string;
+  phone: string;
+  details: string;
+};
+
+const emptyForm: FormFields = {
+  name: "",
+  email: "",
+  phone: "",
+  details: "",
+};
 
 export default function GetQuote() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    details: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
-  const [disabled, setDisabled] = useState(false); // Prevent multiple submissions
+  const [formData, setFormData] = useState<FormFields>(emptyForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.currentTarget;
+    switch (name) {
+      case "name":
+        setFormData((current) => ({ ...current, name: value }));
+        break;
+      case "email":
+        setFormData((current) => ({ ...current, email: value }));
+        break;
+      case "phone":
+        setFormData((current) => ({ ...current, phone: value }));
+        break;
+      case "details":
+        setFormData((current) => ({ ...current, details: value }));
+        break;
+    }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (disabled) return; // If button is disabled, do nothing
-
-    setLoading(true);
-    setDisabled(true); // Disable button immediately
-    setMessage("");
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setStatus(null);
 
     try {
-      const res = await fetch("/api/send-quote", {
+      const response = await fetch("/api/send-quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      const payload: unknown = await response.json();
+      const message =
+        typeof payload === "object" &&
+        payload !== null &&
+        "message" in payload &&
+        typeof payload.message === "string"
+          ? payload.message
+          : undefined;
 
-      const data = await res.json();
-      setMessage(data.message);
-
-      if (res.ok) {
-        // ✅ Reset form after success
-        setFormData({ name: "", email: "", phone: "", details: "" });
+      if (!response.ok) {
+        throw new Error(message || "Your message couldn’t be sent. Please try again.");
       }
 
-      // Re-enable after 5 seconds (optional)
-      setTimeout(() => setDisabled(false), 5000);
-
-    } catch (err) {
-      setMessage("Something went wrong. Try again!");
-      setDisabled(false); // Allow retry on failure
+      setStatus({
+        type: "success",
+        message: message || "Thanks — your message has been sent.",
+      });
+      setFormData(emptyForm);
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong while sending your message. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setLoading(false);
   };
 
   return (
-    <section id="contact" className="bg-[#1F1B1A] min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full">
-        {/* Left Section */}
-        <div className="flex flex-col justify-center">
-          <h2 className="text-white text-3xl font-bold mb-4">Get a Quote</h2>
-          <p className="text-gray-400 mb-6">
-            Fill out the form and receive your estimate within 24 hours.
-          </p>
-        </div>
-
-        {/* Right Section: Form */}
-        <div className="bg-[#2A2524] p-8 rounded-lg shadow-lg">
-          <form className="space-y-5" onSubmit={handleSubmit}>
-            <input
-              name="name"
-              type="text"
-              placeholder="Full Name"
-              value={formData.name}
-              className="w-full px-4 py-3 bg-[#1F1B1A] text-white rounded-md border border-gray-600 focus:border-[#FF914D] outline-none"
-              onChange={handleChange}
-              required
-            />
-            <input
-              name="email"
-              type="email"
-              placeholder="Email Address"
-              value={formData.email}
-              className="w-full px-4 py-3 bg-[#1F1B1A] text-white rounded-md border border-gray-600 focus:border-[#FF914D] outline-none"
-              onChange={handleChange}
-              required
-            />
-            <input
-              name="phone"
-              type="tel"
-              placeholder="Phone Number"
-              value={formData.phone}
-              className="w-full px-4 py-3 bg-[#1F1B1A] text-white rounded-md border border-gray-600 focus:border-[#FF914D] outline-none"
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="details"
-              placeholder="Project Requirements"
-              value={formData.details}
-              className="w-full px-4 py-3 bg-[#1F1B1A] text-white rounded-md border border-gray-600 focus:border-[#FF914D] outline-none h-32"
-              onChange={handleChange}
-              required
-            />
-            <button
-              type="submit"
-              disabled={loading || disabled}
-              className={`w-full py-3 rounded-md font-semibold transition ${
-                disabled ? "bg-gray-500 cursor-not-allowed" : "bg-[#FF914D] text-white hover:bg-orange-600"
-              }`}
-            >
-              {loading ? "Sending..." : "Request Quote"}
-            </button>
-            {message && <p className="text-gray-400 mt-3">{message}</p>}
-          </form>
-        </div>
+    <div className="contact-form-wrap">
+      <div className="contact-form-intro">
+        <p className="contact-overline">A project in mind?</p>
+        <p>Share a little context and I&apos;ll get back to you.</p>
       </div>
-    </section>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-field">
+          <label htmlFor="contact-name">Name</label>
+          <input
+            autoComplete="name"
+            id="contact-name"
+            name="name"
+            type="text"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="contact-field">
+          <label htmlFor="contact-email-address">Email</label>
+          <input
+            autoComplete="email"
+            id="contact-email-address"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="contact-field">
+          <label htmlFor="contact-phone">Phone</label>
+          <input
+            autoComplete="tel"
+            id="contact-phone"
+            name="phone"
+            type="tel"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="contact-field contact-field-wide">
+          <label htmlFor="contact-details">What are you looking to build?</label>
+          <textarea
+            id="contact-details"
+            name="details"
+            rows={4}
+            value={formData.details}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="contact-form-actions">
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending…" : "Send inquiry"}
+            <ArrowUpRight size={15} aria-hidden="true" />
+          </button>
+          {status && (
+            <p
+              className={`contact-form-status contact-form-status-${status.type}`}
+              role={status.type === "error" ? "alert" : "status"}
+            >
+              {status.message}
+            </p>
+          )}
+        </div>
+      </form>
+    </div>
   );
 }
